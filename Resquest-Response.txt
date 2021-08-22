@@ -1,0 +1,183 @@
+Assignment 1: Count how many times each total has been rolled
+
+Request URL: http://localhost:8080/dice/simulation?numberOfDice=3&diceSides=6&totNumRolls=4
+response
+{
+    "errorDescription": null,
+    "responseList": [
+        {
+            "DICETOTAL": 6,
+            "ROLLCOUNT": 1
+        },
+        {
+            "ROLLCOUNT": 1,
+            "DICETOTAL": 9
+        },
+        {
+            "ROLLCOUNT": 1,
+            "DICETOTAL": 12
+        },
+        {
+            "ROLLCOUNT": 1,
+            "DICETOTAL": 14
+        }
+    ]
+}
+
+Request URL: http://localhost:8080/dice/simulation?numberOfDice=3&diceSides=6&totNumRolls=6
+response
+{
+    "errorDescription": null,
+    "responseList": [
+        {
+            "DICETOTAL": 7,
+            "ROLLCOUNT": 1
+        },
+        {
+            "ROLLCOUNT": 1,
+            "DICETOTAL": 9
+        },
+        {
+            "ROLLCOUNT": 1,
+            "DICETOTAL": 10
+        },
+        {
+            "ROLLCOUNT": 1,
+            "DICETOTAL": 11
+        },
+        {
+            "ROLLCOUNT": 1,
+            "DICETOTAL": 12
+        },
+        {
+            "ROLLCOUNT": 1,
+            "DICETOTAL": 15
+        }
+    ]
+}
+
+Request : Changing number of dice=2
+URL: http://localhost:8080/dice/simulation?numberOfDice=2&diceSides=6&totNumRolls=4
+response
+{
+    "errorDescription": null,
+    "responseList": [
+        {
+            "DICETOTAL": 7,
+            "ROLLCOUNT": 2
+        },
+        {
+            "ROLLCOUNT": 1,
+            "DICETOTAL": 8
+        },
+        {
+            "ROLLCOUNT": 1,
+            "DICETOTAL": 11
+        }
+    ]
+}
+
+Assignment 2.1 : Return the total number of simulations and total rolls made, grouped by all existing dice number–dice side combinations
+
+Request URL: http://localhost:8080/dice/simulation-distribution
+
+response
+{
+    "errorDescription": null,
+    "responseList": [
+        {
+            "TOTALSIMULATION": 1,
+            "TOTALROLLS": 4
+        },
+        {
+            "TOTALSIMULATION": 2,
+            "TOTALROLLS": 10
+        }
+    ]
+}
+
+Assignment 2.2 : For a given dice number–dice side combination, return the relative distribution, compared to the total rolls, for all the simulations
+
+Request
+URL: http://localhost:8080/dice/relative-distribution
+
+response
+[
+    {
+        "rollSum": 7,
+        "numberOfDice": 2,
+        "diceSides": 6,
+        "totRollCount": 2,
+        "percentage": "14.29%"
+    },
+    {
+        "rollSum": 8,
+        "numberOfDice": 2,
+        "diceSides": 6,
+        "totRollCount": 1,
+        "percentage": "7.14%"
+    },
+    {
+        "rollSum": 11,
+        "numberOfDice": 2,
+        "diceSides": 6,
+        "totRollCount": 1,
+        "percentage": "7.14%"
+    },
+    {
+        "rollSum": 6,
+        "numberOfDice": 3,
+        "diceSides": 6,
+        "totRollCount": 1,
+        "percentage": "7.14%"
+    },
+    {
+        "rollSum": 7,
+        "numberOfDice": 3,
+        "diceSides": 6,
+        "totRollCount": 1,
+        "percentage": "7.14%"
+    },
+    {
+        "rollSum": 9,
+        "numberOfDice": 3,
+        "diceSides": 6,
+        "totRollCount": 2,
+        "percentage": "14.29%"
+    },
+    {
+        "rollSum": 10,
+        "numberOfDice": 3,
+        "diceSides": 6,
+        "totRollCount": 1,
+        "percentage": "7.14%"
+    },
+    {
+        "rollSum": 11,
+        "numberOfDice": 3,
+        "diceSides": 6,
+        "totRollCount": 1,
+        "percentage": "7.14%"
+    },
+    {
+        "rollSum": 12,
+        "numberOfDice": 3,
+        "diceSides": 6,
+        "totRollCount": 2,
+        "percentage": "14.29%"
+    },
+    {
+        "rollSum": 14,
+        "numberOfDice": 3,
+        "diceSides": 6,
+        "totRollCount": 1,
+        "percentage": "7.14%"
+    },
+    {
+        "rollSum": 15,
+        "numberOfDice": 3,
+        "diceSides": 6,
+        "totRollCount": 1,
+        "percentage": "7.14%"
+    }
+]
