@@ -7,7 +7,7 @@ CONTENTS OF THIS FILE
  * Design
  
 # Introduction
-Dice simulation is the use case that need to be implemented in Sprint Boot and provide REST end points to user to perform different actions.
+Dice simulation use case that need to be implemented in Sprint Boot and provide REST end points to user to perform different actions.
  
 Developed a Sprint boot application named "dice" covering all use cases as per requirement.
 URL: http://localhost:8080/dice/index
@@ -37,7 +37,7 @@ Create a REST endpoint that can query the stored data:
 # Assumption
 1. User can provide different combination of input value. 
 	e.g. Simulation 1: number of dice =3, sides of a dice=6 and total number of rolls=100
-		 Simulation 1: number of dice =2, sides of a dice=4 and total number of rolls=200
+		Simulation 2: number of dice =2, sides of a dice=4 and total number of rolls=200
 		 
 # Design
 1. Created 3 below tables to store information that would serve all REST end points
